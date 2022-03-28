@@ -28,6 +28,19 @@ namespace ModularUtilityAI
             actionValues = new Dictionary<AIAction, float>();
         }
 
+        public float GetActionValue(AIAction action)
+        {
+            if(actionValues.TryGetValue(action, out float value))
+            {
+                return value;
+            }
+            else
+            {
+                Debug.LogError(action.name + " is not being evaluated for " + name);
+                return -1;
+            }
+        }
+
         // Update is called once per frame
         void Update()
         {

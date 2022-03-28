@@ -21,11 +21,14 @@ namespace ModularUtilityAI
         
         Dictionary<AIAction, float> actionValues;
 
+        public Dictionary<string, float> parameters;
+
         // Start is called before the first frame update
         void Start()
         {
             agent = GetComponent<NavMeshAgent>();
             actionValues = new Dictionary<AIAction, float>();
+            parameters = new Dictionary<string, float>();
         }
 
         public float GetActionValue(AIAction action)

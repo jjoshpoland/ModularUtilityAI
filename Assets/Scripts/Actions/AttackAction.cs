@@ -9,5 +9,12 @@ namespace ModularUtilityAI
         public float Range;
         public int BaseDamage;
         public float Cooldown;
+
+
+        public override void Do(UtilityAI context)
+        {
+            base.Do(context);
+        }
+
     }
 }
